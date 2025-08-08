@@ -32,7 +32,7 @@ export default function LoginPage() {
   const handleGoogleLogin = async () => {
     setLoading(true);
     setError('');
-    
+
     try {
       const provider = new GoogleAuthProvider();
       await signInWithPopup(auth, provider);
@@ -131,7 +131,7 @@ export default function LoginPage() {
 
                 <div className="text-center">
                   <p className="mb-0">
-                    Don't have an account?{' '}
+                    Don&apos;t have an account?{' '}
                     <Link href="/auth/register" className="text-decoration-none">
                       Sign up here
                     </Link>

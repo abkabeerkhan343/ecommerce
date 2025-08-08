@@ -19,7 +19,7 @@ export default function CheckoutSuccess() {
         <div className="display-1 text-success mb-4">✓</div>
         <h1 className="mb-4">Order Successful!</h1>
         <p className="lead mb-4">
-          Thank you for your purchase. We'll send you an email confirmation shortly.
+          Thank you for your purchase. We&apos;ll send you an email confirmation shortly.
         </p>
         <div className="d-flex justify-content-center gap-3">
           <button

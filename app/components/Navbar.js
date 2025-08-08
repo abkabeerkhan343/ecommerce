@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { useAuth } from '../contexts/AuthContext';
 import { signOut } from 'firebase/auth';
 import { auth } from '../firebase/firebase';
@@ -12,7 +13,6 @@ export default function Navbar() {
   const { user } = useAuth();
 
   useEffect(() => {
-    // Initialize Bootstrap JavaScript
     require('bootstrap/dist/js/bootstrap.bundle.min.js');
   }, []);
 
@@ -31,39 +31,39 @@ export default function Navbar() {
       boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
     }}>
       <div className="container">
-        <a className="navbar-brand fw-bold" href="/">
+        <Link className="navbar-brand fw-bold" href="/">
           <i className="bi bi-shop me-2"></i>E-Commerce Store
-        </a>
+        </Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav me-auto">
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <Link className="nav-link" href="/">
                 <i className="bi bi-house me-1"></i>Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/listing">
+              <Link className="nav-link" href="/listing">
                 <i className="bi bi-grid me-1"></i>Products
-              </a>
+              </Link>
             </li>
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                 <i className="bi bi-tag me-1"></i>Categories
               </a>
               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="/categories/electronics">Electronics</a></li>
-                <li><a className="dropdown-item" href="/categories/fashion">Fashion</a></li>
-                <li><a className="dropdown-item" href="/categories/books">Books</a></li>
-                <li><a className="dropdown-item" href="/categories/sports">Sports</a></li>
+                <li><Link className="dropdown-item" href="/categories/electronics">Electronics</Link></li>
+                <li><Link className="dropdown-item" href="/categories/fashion">Fashion</Link></li>
+                <li><Link className="dropdown-item" href="/categories/books">Books</Link></li>
+                <li><Link className="dropdown-item" href="/categories/sports">Sports</Link></li>
                 <li><hr className="dropdown-divider" /></li>
-                <li><a className="dropdown-item" href="/listing">All Products</a></li>
+                <li><Link className="dropdown-item" href="/listing">All Products</Link></li>
               </ul>
             </li>
           </ul>
-          
+
           <div className="d-flex align-items-center gap-3">
             {/* Search Bar */}
             <form className="d-flex me-3" style={{ minWidth: '250px' }}>
@@ -94,15 +94,15 @@ export default function Navbar() {
                 </button>
                 <ul className="dropdown-menu dropdown-menu-end">
                   <li><h6 className="dropdown-header">Welcome back!</h6></li>
-                  <li><a className="dropdown-item" href="/profile">
+                  <li><Link className="dropdown-item" href="/profile">
                     <i className="bi bi-person me-2"></i>My Profile
-                  </a></li>
-                  <li><a className="dropdown-item" href="/orders">
+                  </Link></li>
+                  <li><Link className="dropdown-item" href="/orders">
                     <i className="bi bi-bag me-2"></i>My Orders
-                  </a></li>
-                  <li><a className="dropdown-item" href="/wishlist">
+                  </Link></li>
+                  <li><Link className="dropdown-item" href="/wishlist">
                     <i className="bi bi-heart me-2"></i>Wishlist
-                  </a></li>
+                  </Link></li>
                   <li><hr className="dropdown-divider" /></li>
                   <li>
                     <button className="dropdown-item" onClick={handleSignOut}>
