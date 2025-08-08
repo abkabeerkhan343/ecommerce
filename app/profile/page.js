@@ -77,9 +77,10 @@ export default function Profile() {
             <h3 className="mb-4">Order History</h3>
             {orders.length === 0 ? (
               <div className="alert alert-info">
-                You haven't placed any orders yet.{' '}
-                <a href="/listing" className="alert-link">Start shopping</a>
-              </div>
+              You haven&apos;t placed any orders yet.{' '}
+              <a href="/listing" className="alert-link">Start shopping</a>
+            </div>
+            
             ) : (
               <div className="list-group">
                 {orders.map(order => (

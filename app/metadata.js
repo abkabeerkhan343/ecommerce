@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 // Default metadata for the application
-export const defaultMetadata: Metadata = {
+export const defaultMetadata = {
   title: {
     default: 'E-Commerce Store',
     template: '%s | E-Commerce Store',

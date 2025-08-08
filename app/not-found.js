@@ -8,7 +8,9 @@ export default function NotFound() {
       <div className="container py-5 text-center">
         <h1 className="display-1 mb-4">404</h1>
         <h2 className="mb-4">Page Not Found</h2>
-        <p className="lead mb-4">Sorry, we couldn't find the page you're looking for.</p>
+        <p className="lead mb-4">
+          Sorry, we couldn&apos;t find the page you&apos;re looking for.
+        </p>
         <Link href="/" className="btn btn-primary">
           Return Home
         </Link>

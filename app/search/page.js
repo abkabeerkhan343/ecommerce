@@ -18,11 +18,11 @@ export default function SearchResults() {
         setLoading(true);
         const response = await fetch(`/api/search?q=${encodeURIComponent(query)}`);
         const data = await response.json();
-        
+
         if (!response.ok) {
           throw new Error(data.error || 'Failed to search products');
         }
-        
+
         setProducts(data.products);
       } catch (error) {
         setError(error.message);
@@ -40,8 +40,8 @@ export default function SearchResults() {
     <>
       <Navbar />
       <div className="container py-5">
-        <h1 className="mb-4">Search Results for "{query}"</h1>
-        
+        <h1 className="mb-4">Search Results for &quot;{query}&quot;</h1>
+
         {loading && (
           <div className="text-center">
             <div className="spinner-border" role="status">
